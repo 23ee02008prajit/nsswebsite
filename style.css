@@ -151,14 +151,29 @@
 
 }
 
-/*.navbar{
+.navbar{
+    background:rgba(5, 5, 5, 0.8);
+    background-size: cover;
+    background-blend-mode:darken;
+    position: fixed;
+    width: 100%;
+    transition: all 0.4s ease-out;
+}
+.fixed-nav{
+    backdrop-filter: blur(10px);
+    background:rgba(5, 5, 5, 0.3);
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.events{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    top:0;
-    cursor: pointer;
-}*/
+}
+.event-card{
+    height: 40px;
+    background: rgba(138, 23, 23, 0.3);
+}
 
 .logo{
     width:20%;
