@@ -3,10 +3,6 @@
     padding:0;
     box-sizing: border-box;
 }
-
-
-
-
 .list{
     
     width: 100%;
@@ -16,7 +12,7 @@
 
 .list li{
     list-style: none;
-    padding:26px 30px;
+    padding:1rem;
 
 }
 
@@ -28,7 +24,7 @@
 
 .list li a:hover{
     text-decoration:none;
-    color: blue;
+    color: rgb(0, 149, 255);
 
 }
 
@@ -45,7 +41,7 @@
     width:20%;
     display: flex;
     justify-content: center;
-    align-items: centre;
+    align-items: center;
 
 }
 
@@ -118,22 +114,23 @@
 
 }
 
-.content{
-    height:auto;
+.content {
+    min-height: 500px;
     display: flex;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
     align-items: center;
     justify-content: space-evenly;
-    max-width: 80%;
-    margin: auto;
+    padding: 1rem; /* Add padding for smaller screens */
 }
 
-.exe{
-    width: 580px;
+.exe {
+    width: 100%; /* Make the box responsive */
+    max-width: 680px; /* Limit maximum width */
     border-radius: 16px;
     padding: 20px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-    justify-content: centre;
-    margin:auto;
+    justify-content: center;
+    margin: auto;
 }
 
 
@@ -156,23 +153,35 @@
     
     .events{
         display: flex;
+        flex-wrap: wrap;
+        /*justify-content: space-around;*/
     }
     .event-card{
-        height: 250px;
-    }
+        /*flex: 0 0 calc(33.33% - 20px); /* Adjust width for responsiveness */
+        /*max-width: calc(33.33% - 20px); /* Adjust max-width for responsiveness */
+        height: 300px; /* Auto height to fit content */
+        /*margin: 20px; /* Adjust margin */
+        /*background-color: #f0f0f0; /* Example background color */
+        /*border-radius: 10px; /* Example border radius */
+        /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Example box shadow */
+        text-align: center; /* Center align content */
+    }  
+
+    
     .card-title{
         color: white;
         font-size: 60px;
         font-family: sans-serif;
         font: bolder;
         margin-top: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
+       /* margin-left: 20px;
+        margin-right: 20px;*/
     }
     
     #c1{
+
         background-color: rgba(11, 155, 195, 0.8);
-        width: 40%;
+      width: 60%;
     }
     #c1:hover{
         background-color: rgba(11, 110, 150, 0.825);
@@ -180,7 +189,7 @@
     }
     #c2{
         background-color: rgba(195, 51, 11, 0.8);
-        width: 60%;
+        width: 40%;
     }
     #c2:hover{
         background-color: rgba(165, 40, 8, 0.825);
@@ -188,15 +197,20 @@
     }
     #c3{
         background-color: rgba(32, 195, 11, 0.681);
-        width: 60%;
+        width: 40%;
+        
     }
     #c3:hover{
         background-color: rgba(8, 165, 58, 0.825);
         transition: background-color 0.2s ease-out;
+        background-image: url('plantation.png');
+        background-size: contain;
+        color:transparent
+       
     }
     #c4{
         background-color: rgb(195, 11, 11);
-        width: 40%;
+       width: 60%;
     }
     #c4:hover{
         background-color: rgba(165, 8, 8, 0.714);
@@ -239,9 +253,12 @@ hr{
 
 .members{
     display: flex;
+    flex-wrap: wrap; /* Allow members to wrap to the next line */
+    justify-content: center;
 }
 .cordinator1{
     margin: 8px;
+    text-align: center;
 }
 .cordinator1 img{
      width: 100px;
@@ -380,3 +397,51 @@ section .title span{
         transform: translateY(0%);
     }
  }
+ @media only screen and (max-width: 768px) {
+    .list li {
+        padding: .5rem; /* Adjust as needed */
+    }
+
+    .logo img {
+        width: 25%; /* Adjust as needed */
+    }
+    .event-card {
+        flex: 0 0 calc(50% ); /* Adjust width for smaller screens */
+        max-width: calc(50% ); /* Adjust max-width for smaller screens */
+    }
+
+    .card-title {
+        font-size: 7vw;/* Adjust font size for smaller screens */
+    }
+    .cordinator1 {
+        flex: 0 0 calc(50% - 16px); /* Adjust width for smaller screens */
+        max-width: calc(50%-16px ); /* Adjust max-width for smaller screens */
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .list {
+        flex-direction: column;
+    }
+
+    .list li {
+        padding: .375rem; /* Adjust as needed */
+    }
+
+    .logo img {
+        width: 30%; /* Adjust as needed */
+    }
+    .event-card {
+        flex: 0 0 calc(100% ); /* Adjust width for even smaller screens */
+        max-width: calc(100% ); /* Adjust max-width for even smaller screens */
+    }
+    .cordinator1 {
+        flex: 0 0 calc(100% - 16px); /* Adjust width for even smaller screens */
+        max-width: calc(100% - 16px); /* Adjust max-width for even smaller screens */
+    }
+
+    .card-title {
+        font-size: 9vw; /* Adjust font size for even smaller screens */
+    }
+}
