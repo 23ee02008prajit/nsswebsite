@@ -3,6 +3,11 @@
     padding:0;
     box-sizing: border-box;
 }
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 .list{
     
     width: 100%;
@@ -46,7 +51,7 @@
 }
 
 .logo img{
-    width:22%;
+    width:50px;
     border: 4px transparent;
     border-radius:50px;
 }
@@ -136,6 +141,8 @@
 
 
     .navbar{
+        height: 60px;
+        display: flex;
         background:transparent;
         background-size: cover;
         background-blend-mode:darken;
@@ -143,6 +150,52 @@
         width: 100%;
         transition: all 0.4s ease-out;
     }
+    .triple-line{
+        display: none;
+    }
+    .sideMenu {
+        position: fixed;
+        top: 0;
+        left: -300px; /* Off-screen initially */
+        width: 300px;
+        height: 100%;
+        padding-top: 15%;
+        display: flex;
+        align-items: center;
+        background-color: #333437;
+        color: #fff;
+        transition: left 0.3s ease-in;
+      }
+      
+      .sideMenu #sideList {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .sideMenu #sideItem{
+        display: block;
+        padding-left: 20%;
+        padding-top: 30px;
+        pa
+      }
+
+      #sidea{
+        text-decoration: none;
+        color: #fff;
+        font-size: large;
+      }
+      
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .sideMenu{
+        display: none;
+      }
     .fixed-nav{
         backdrop-filter: blur(10px);
         background:rgba(5, 5, 5, 0.3);
@@ -402,8 +455,16 @@ section .title span{
         padding: .5rem; /* Adjust as needed */
     }
 
+    .triple-line{
+        display: none;
+    }
+
+    .sideMenu{
+      display: none;
+    }
+
     .logo img {
-        width: 25%; /* Adjust as needed */
+        width: 50px; /* Adjust as needed */
     }
     .event-card {
         flex: 0 0 calc(50% ); /* Adjust width for smaller screens */
@@ -421,6 +482,21 @@ section .title span{
 }
 
 @media only screen and (max-width: 480px) {
+    .v-class{
+        display:none;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    .sideMenu{
+        display: block;
+    }
+    .triple-line{
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 3%;
+    }
     .list {
         flex-direction: column;
     }
@@ -430,7 +506,7 @@ section .title span{
     }
 
     .logo img {
-        width: 30%; /* Adjust as needed */
+        width: 50px; /* Adjust as needed */
     }
     .event-card {
         flex: 0 0 calc(100% ); /* Adjust width for even smaller screens */
@@ -444,4 +520,5 @@ section .title span{
     .card-title {
         font-size: 9vw; /* Adjust font size for even smaller screens */
     }
+
 }

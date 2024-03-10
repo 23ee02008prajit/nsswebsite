@@ -6,3 +6,11 @@ window.addEventListener('scroll', function() {
       navbar.classList.remove('fixed-nav');
     }
   });
+
+  function openSideMenu(){
+    document.getElementById('sideMenu').style.left = '0';
+  }
+
+  function closeSideMenu(){
+    document.getElementById('sideMenu').style.left = '-300px';
+  }
