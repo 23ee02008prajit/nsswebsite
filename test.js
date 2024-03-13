@@ -12,5 +12,5 @@ window.addEventListener('scroll', function() {
   }
 
   function closeSideMenu(){
-    document.getElementById('sideMenu').style.left = '-300px';
+    document.getElementById('sideMenu').style.left = '-100%';
   }
